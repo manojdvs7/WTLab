@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Colour changer</title>
+    <script>
+        window.onload = function() {
+            var rB = document.getElementsByClassName("radioColor");
+            rB[0].onclick = handler1;
+            rB[1].onclick = handler2;
+            rB[2].onclick = handler3;
+        }
+
+        function handler1() {
+            document.body.style.backgroundColor = "lightblue";
+            var txt1 = document.getElementById("colorText");
+            var txt2 = document.getElementById("radioCount");
+            txt1.textContent = "Light_Blue";
+            txt2.textContent = "3";
+
+        }
+
+        function handler2() {
+            document.body.style.backgroundColor = "lightyellow";
+            var txt1 = document.getElementById("colorText");
+            var txt2 = document.getElementById("radioCount");
+            txt1.textContent = "Light_Yellow";
+            txt2.textContent = "3";
+        }
+
+        function handler3() {
+            document.body.style.backgroundColor = "lightgreen";
+            var txt1 = document.getElementById("colorText");
+            var txt2 = document.getElementById("radioCount");
+            txt1.textContent = "Light_Green";
+            txt2.textContent = "3";
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+
+        <p>Choose one colour :</p>
+
+        <pre>
+
+<input type="radio" name="bgcRbtns" class="radioColor" value="Light_Blue">Light Blue
+<input type="radio" name="bgcRbtns" checked class="radioColor" value="Light_Yellow">Light Yellow 
+<input type="radio" name="bgcRbtns" class="radioColor" value="Light_Green">Light Green
+
+</pre>
+
+        You have chosen <span id="colorText"></span>
+
+        <br>
+
+        Count of radio buttons is : <span id="radioCount"></span>
+
+    </form>
+</body>
+
+</html>
