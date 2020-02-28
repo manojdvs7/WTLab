@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Student Registration form </title>
+    <h4 style="text-align: left">Manoj<br> 1602-17-737-115</h4>
+    <style>
+        body {
+
+            text-align: center;
+
+        }
+
+        div {
+            border: 3px solid black;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
+    </style>
+    <script>
+        function validateform() {
+            var x = document.form["form"]["user"].value;
+            if (x == "")
+                alert("name must be filled")
+            return false;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <form>
+            <img src="logo.gif" alt="img" width="20%">
+            <h3 style="text-align: center"> STUDENT REGISTRATION FORM </h3>
+            Username: <input type="text" name="user_name" required> <br> <br>
+            Password: <input type="Password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain at least one number and one lower and uppercase letter,and at least 8 or more characters" required> <br> <br>
+            Email:<input type="email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must contain a valid email address(with @ and . and at least 2 letters after .)" required><br><br>
+            Phone:<input type="text" name="Phone" pattern="([0-9]).{10}" title="u must enter 10 digits" required><br><br>
+            SelectLanguage Known:<input type="checkbox">English <input type="checkbox">Hindi <input type="checkbox">Telugu
+            <br><br>
+            select Gender:<input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender">Female
+            <br><br>
+            <label for="states">Select State:</label>
+            <select id="states" required>
+                <option value="Telangana">Telangana</option>
+                <option value="Andhra">Andhra pradesh</option>
+                <option value="Maharastra">Maharastra</option>
+                <option value="Karnataka">Karnataka</option>
+            </select>
+            <p>Give your comment</p>
+            <textarea id="comments" rows="10" cols="50">
+            </textarea>
+            <br>
+            <br>
+            <br>
+            <label for="browse.."> Select resume to upload:</label>
+            <input type="file" id="Browser" name="Browse..">
+            <br><br>
+            <input type="submit" value="submit Query">
+            <input type="reset" value="Reset">
+
+        </form>
+
+    </div>
+</body>
+
+</html>
